@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg" class="logo" >
+
+
+
+            
+            <nav>
+                <ul id="menuList">
+                    <li><a href="">Game Controllers</a></li>
+                    <li><a href="">VR Accessories</a></li>
+                    <li><a href="">Media Remote</a></li>
+                    <li><a href=""> Others</a></li>
+                
+
+                    
+                </ul>
+            </nav>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-1">
+                <h2> PS5 Custom <br>DualSense</h2>
+
+                <h3>wireless controller for playstation 5</h3>
+                <p>(Compatible/generic)</p>
+
+                <h4>$34.50</h4>
+
+                <button type="button">Buy Now <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/12/Right_arrow.svg"></button>
+            </div>
+
+            <div class="col-2" id="col-2"> 
+                <img src="https://eu.aimcontrollers.com/wp-content/uploads/2020/11/Default_Front_Black-1.png"
+                    class="controller" id="controller">
+                <div class="color-box"></div>
+
+
+                <div class="add-btn" id="add-btn">
+                    <img src="https://www.svgrepo.com/show/154811/thin-add-button.svg"></img>
+                    <p><small>Add to Cart</small></p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="social-links">
+            <img src="https://www.pngrepo.com/png/112897/512/moon.png" id="icon">
+            <img src=""></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>
+
+<style>
+
+    #icon{
+        width: 30px;
+        cursor:pointer;
+        color:gray;
+
+    }
+:root{
+    --text-color:black;
+    --primary-color: #707070;
+    --secondory-color: #fff;
+   
+}
+.dark-theme{
+    --text-color:#707070;
+    --primary-color: #edf2fc;
+    --secondory-color: #212121;
+    
+}
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+body{
+    background-color: var(--secondory-color);
+}
+    .container {
+        width: 100%;
+        min-height: 100%;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 50px;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+
+    .menu-icon {
+        display: none;
+        width: 25;
+        cursor: pointer;
+    }
+
+    nav {
+        flex: 1;
+        text-align: right;
+
+
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 14px;
+
+    }
+
+    nav ul li a:hover {
+        text-decoration: none;
+        color: #ff5ea2;
+        font-size: 14px;
+
+    }
+
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 100px 0;
+    }
+
+    .col-1 {
+        color:var(--text-color);
+        flex-basis: 40%;
+        position: relative;
+        margin-left: 50px;
+    }
+
+    .col-1 h2 {
+       
+        font-size: 54px;
+        color:var(--primary-color);
+        font-weight: 100;
+        margin: 20px 0 10;
+        transition-property:color;
+        transition-duration: 5s;
+        
+
+        
+       
+        
+    }
+
+    .col-1 p {
+        font-size: 16px;
+        color: #b7b7b7;
+        font-weight: 100;
+    }
+
+    .col-1 p {
+        margin: 30px 0;
+        font-size: 20px;
+    }
+
+    button {
+        width: 140px;
+        border: 0;
+        padding: 12px 10px;
+        outline: none;
+        color: #fff;
+        background: linear-gradient(to right, #fb5283, #ff4527);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: width 0.5s;
+    }
+
+    button img {
+        width: 10px;
+        display: none;
+    }
+
+    button:hover img {
+        display: block;
+    }
+
+    button:hover {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .col-1::after {
+        content: '';
+        width: 10px;
+        height: 57%;
+        background: linear-gradient(#fb5283, #ff3527);
+        position: absolute;
+        left: -40px;
+        top: 8px;
+        
+
+    }
+
+    .col-2 {
+        position: relative;
+        flex-basis: 60%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .col-2 .controller {
+        width: 70%;
+        
+
+    }
+
+    .color-box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: linear-gradient(#fb5283, #ff3527);
+        border-radius: 20px 0 0 20px;
+        height: 100%;
+        width: 80%;
+        z-index: -1;
+        transform: translate(150px);
+    }
+
+    .add-btn img {
+        width: 35px;
+        margin-bottom: 5px;
+    }
+
+    .add-btn {
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        transform: translate(50px)
+    }
+    .social-links{
+        text-align: center;
+    }
+
+     @media only screen and (max-width:700px){
+
+
+    .add-btn img{
+        width: 25px;
+        
+        
+    }
+    .add-btn{
+        transform: translate(25px);
+        text-align: center;
+    }
+
+         nav{
+             width:100%;
+             background:linear-gradient(#fb5283, #ff3527);
+             position:absolute;
+             top:75px;
+             right: 0;
+             z-index: 2;
+         }
+         nav ul li{
+             display: block;
+             margin-top: 10px;
+             margin-bottom: 10px;
+             
+
+         }
+         nav ul li a{
+             color: #fff;
+
+
+         }
+         .menu-icon{
+             display: block;
+             margin-left:75%;
+             
+
+         }
+         #menuList{
+             overflow: hidden;
+             
+             transition: 0.5s;
+         }
+         .row{
+             flex-direction: column-reverse;
+             margin:50px 0;
+             
+             
+         }
+         .col-2{
+             
+             flex-basis: 100%;
+             margin-bottom: 50px;
+         }
+         .col-2 .controller{
+             width: 77%;
+             
+         }
+         .color-box{
+             transform: translateX(75px);
+         }
+         .col-1{
+             flex-basis:100%;
+         }
+         .col-1 h2{
+             font-size: 35px;
+         }
+         .col-1 h3{
+             font-size: 15px;
+         }
+     }
+</style>
+
+<script>
+
+var menuList = document.getElementById("menuList");
+var col2 = document.getElementById("col-2");
+
+
+
+
+
+menuList.style.maxHeight ="0px";
+
+
+
+function togglemenu(){
+
+    if (menuList.style.maxHeight == "0px"){
+        
+        menuList.style.maxHeight = "130px"; 
+        col2.style.marginTop ="25%";
+        col2.style.transition ="0.5s";
+        
+        
+
+    }
+    else{
+        menuList.style.maxHeight="0px";
+        col2.style.marginTop ="0%";
+        
+        
+    }
+}
+
+
+var icon =document.getElementById("icon");
+var controller = document.getElementById("controller")
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    console.log("hey")
+    if(document.body.classList.contains("dark-theme")){
+        icon.src="https://image.flaticon.com/icons/png/512/106/106874.png";
+        controller.src ="https://us.aimcontrollers.com/wp-content/uploads/2020/11/Default_Front_White-2.png";
+        
+    }
+    else{
+        icon.src="https://www.pngrepo.com/png/112897/512/moon.png"
+        controller.src="https://eu.aimcontrollers.com/wp-content/uploads/2020/11/Default_Front_Black-1.png"
+    }
+}
+
+
+</script>
+
